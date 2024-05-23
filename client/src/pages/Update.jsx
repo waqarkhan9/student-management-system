@@ -28,6 +28,7 @@ const Update = () => {
     }
   };
   console.log(student);
+
   return (
     <div className="form">
       <h1>Update Student</h1>

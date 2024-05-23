@@ -1,0 +1,42 @@
+.App {
+  margin-top: 50px;
+  height: 50vh;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container {
+  display: block;
+}
+.title {
+  color: red;
+  font-size: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.students {
+  align-items: center;
+  background-color: aqua;
+  display: inline-block;
+}
+.student {
+  height: 30px;
+  width: 1000px;
+  border: solid 2px;
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.delete {
+  color: red;
+  width: 100px;
+  margin: auto;
+}
+.update {
+  background-color: brown;
+  width: 100px;
+  margin: auto;
+}

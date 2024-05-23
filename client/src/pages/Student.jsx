@@ -29,17 +29,19 @@ const Student = () => {
   };
 
   return (
-    <div>
-      <h1>Student Management System</h1>
+    <div className="container">
+      <div className="title">Student Management System</div>
+
       <div className="students">
         {student.map((student) => (
           <div className="student" key={student.student_id}>
-            First Name :{student.first_name}
-            Last Name : {student.last_name}
+            {student.first_name}
+            {student.last_name}
+
             <button
               className="delete"
               onClick={() => {
-                handleDelete(student.id);
+                handleDelete(student.student_id);
               }}
             >
               Delete

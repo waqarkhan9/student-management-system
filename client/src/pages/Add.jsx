@@ -18,6 +18,7 @@ const Add = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:8800/student", student);
+      alert("Student added");
       navigate("/");
     } catch (err) {
       console.log(err);
