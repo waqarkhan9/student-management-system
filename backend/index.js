@@ -46,7 +46,8 @@ app.delete("/student/:id", (req, res) => {
 });
 
 app.put("/student/:id", (req, res) => {
-  const q = "UPDATE student SET `first_name`, `last_name` WHERE student_id = ?";
+  const q =
+    "UPDATE student SET `first_name`= ?, `last_name`= ? WHERE student_id = ?";
   const studentId = req.params.id;
 
   const values = [req.body.first_name, req.body.last_name];
