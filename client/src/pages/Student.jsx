@@ -33,7 +33,7 @@ const Student = () => {
       <h1>Student Management System</h1>
       <div className="students">
         {student.map((student) => (
-          <div className="student" key={student.id}>
+          <div className="student" key={student.student_id}>
             First Name :{student.first_name}
             Last Name : {student.last_name}
             <button
@@ -45,7 +45,7 @@ const Student = () => {
               Delete
             </button>
             <button className="update">
-              <Link to={`/update/${student.id}`}>Update</Link>
+              <Link to={`/update/${student.student_id}`}>Update</Link>
             </button>
           </div>
         ))}

@@ -46,14 +46,14 @@ app.delete("/student/:id", (req, res) => {
 });
 
 app.put("/student/:id", (req, res) => {
+  const studentId = req.params.id;
   const q =
     "UPDATE student SET `first_name`= ?, `last_name`= ? WHERE student_id = ?";
-  const studentId = req.params.id;
 
   const values = [req.body.first_name, req.body.last_name];
   db.query(q, [...values, studentId], (err, data) => {
     if (err) return res.send(err);
-    return res.json("student updated successfully");
+    return res.json(data);
   });
 });
 
