@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import mysql from "mysql";
 import cors from "cors";
-import express from "express";
+import express, { json } from "express";
 
 dotenv.config();
 
@@ -26,11 +26,33 @@ app.get("/student", (req, res) => {
 
 app.post("/student", (req, res) => {
   const q = "INSERT INTO student (`first_name`, `last_name`) VALUES (?)";
-  //INSERT INTO `student` (`first_name`, `last_name`) VALUES ('hello', 'world');
+
   const values = [req.body.first_name, req.body.last_name];
 
   db.query(q, [values], (err, data) => {
-    return res.json(data);
+    if (err) return res.json(err);
+    return res.json("student has been created successfully");
+  });
+});
+
+app.delete("/student/:id", (req, res) => {
+  const studentId = req.params.id;
+  const q = "DELETE FROM student WHERE student_id = ?";
+
+  db.query(q, [studentId], (err, data) => {
+    if (err) return res.send(err);
+    return res.json("student delete successfully");
+  });
+});
+
+app.put("/student/:id", (req, res) => {
+  const q = "UPDATE student SET `first_name`, `last_name` WHERE student_id = ?";
+  const studentId = req.params.id;
+
+  const values = [req.body.first_name, req.body.last_name];
+  db.query(q, [...values, studentId], (err, data) => {
+    if (err) return res.send(err);
+    return res.json("student updated successfully");
   });
 });
 
