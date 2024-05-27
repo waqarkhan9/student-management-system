@@ -31,13 +31,17 @@ const Student = () => {
   return (
     <div className="container">
       <div className="title">Student Management System</div>
+      <div className="names">
+        <div className="name">First Name</div>
+        <div className="name">Last Name</div>
+      </div>
 
-      <div className="students">
-        {student.map((student) => (
-          <div className="student" key={student.student_id}>
-            {student.first_name}
-            {student.last_name}
-
+      {student.map((student) => (
+        <div className="student" key={student.student_id}>
+          <div className="element">{student.first_name}</div>
+          <div className="element">{student.last_name}</div>
+          <div className="element">
+            {" "}
             <button
               className="delete"
               onClick={() => {
@@ -46,16 +50,20 @@ const Student = () => {
             >
               Delete
             </button>
+          </div>
+          <div className="element">
             <button className="update">
               <Link to={`/update/${student.student_id}`}>Update</Link>
             </button>
           </div>
-        ))}
+        </div>
+      ))}
+      <div className="new">
+        {" "}
+        <button className="newstudent">
+          <Link to="/Add">Add New Student</Link>
+        </button>
       </div>
-
-      <button>
-        <Link to="/Add">Add a new Student</Link>
-      </button>
     </div>
   );
 };

@@ -8,35 +8,57 @@
   text-align: center;
 }
 .container {
-  display: block;
+  display: inline;
+  align-items: center;
 }
 .title {
   color: red;
   font-size: 50px;
   margin-bottom: 50px;
   position: relative;
+  text-decoration: underline;
 }
-.students {
-  align-items: center;
-  background-color: aqua;
+.names {
   display: inline-block;
+  width: 50%;
 }
+.name {
+  width: 15%;
+  float: left;
+  margin-right: 100px;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
 .student {
   height: 30px;
   width: 1000px;
   border: solid 2px;
-  display: flex;
-  margin: 10px;
-  justify-content: space-between;
+  display: inline-block;
+}
+.element {
+  width: 25%;
+  float: left;
+}
+.new {
+  margin: auto;
+}
+.newstudent {
+  font-size: 30px;
+  border-radius: 5px;
+  margin-top: 25px;
 }
 
 .delete {
-  color: red;
+  color: white;
   width: 100px;
   margin: auto;
+  background-color: rgb(236, 18, 18);
+  font-size: 16px;
 }
 .update {
-  background-color: brown;
+  background-color: rgb(51, 168, 47);
   width: 100px;
   margin: auto;
+  font-size: 16px;
 }
