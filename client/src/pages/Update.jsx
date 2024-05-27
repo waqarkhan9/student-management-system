@@ -47,8 +47,13 @@ const Update = () => {
       <button className="formButton" onClick={handleClick}>
         Update
       </button>
-      {error && "Something went wrong!"}
-      <Link to="/">See all Students</Link>
+      <div className="linkallstudents">
+        {" "}
+        {error && "Something went wrong!"}
+        <button className="btnallstudents">
+          <Link to="/">See all Students</Link>
+        </button>
+      </div>
     </div>
   );
 };

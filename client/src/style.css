@@ -1,22 +1,22 @@
 .App {
-  margin-top: 50px;
-  height: 50vh;
-  padding: 0px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 .container {
   display: inline;
   align-items: center;
 }
 .title {
   color: red;
-  font-size: 50px;
-  margin-bottom: 50px;
+  font-size: 60px;
+  margin-bottom: 25px;
+  margin-top: 25px;
   position: relative;
-  text-decoration: underline;
+
+  height: 200px;
 }
 .names {
   display: inline-block;
@@ -39,6 +39,7 @@
 .element {
   width: 25%;
   float: left;
+  font-size: 20px;
 }
 .new {
   margin: auto;
@@ -62,9 +63,16 @@
   margin: auto;
   font-size: 16px;
 }
+.btnallstudents {
+  background-color: rgb(51, 168, 47);
+  width: 200px;
+  margin: auto;
+  font-size: 16px;
+  margin-top: 50px;
+}
 
 .form {
   background-color: gray;
   height: 500px;
-  width: 500px;
+  width: 800px;
 }
