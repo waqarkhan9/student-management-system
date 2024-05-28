@@ -24,6 +24,15 @@ app.get("/student", (req, res) => {
   });
 });
 
+app.get("/byid/:student_id", (req, res) => {
+  const getid = req.params.student_id;
+  const q = "SELECT * from student WHERE `student_id` = (?)";
+  db.query(q, [getid], (err, data) => {
+    if (err) return res.json(err);
+    return res.json(data);
+  });
+});
+
 app.post("/student", (req, res) => {
   const q = "INSERT INTO student (`first_name`, `last_name`) VALUES (?)";
 

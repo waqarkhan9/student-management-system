@@ -57,7 +57,7 @@ const Student = () => {
             </button>
           </div>
           <div className="element">
-            <Link to="/StudentDetails">Details</Link>
+            <Link to={`/StudentDetails/${student.student_id}`}>Details</Link>
           </div>
         </div>
       ))}
