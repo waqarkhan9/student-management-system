@@ -56,6 +56,9 @@ const Student = () => {
               <Link to={`/update/${student.student_id}`}>Update</Link>
             </button>
           </div>
+          <div className="element">
+            <Link to="/StudentDetails">Details</Link>
+          </div>
         </div>
       ))}
       <div className="new">
