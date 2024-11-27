@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Student from "./pages/Student";
 import Update from "./pages/Update";
-import Add from "./pages/Add";
 import StudentDetails from "./pages/StudentDetails";
+import Add from "./pages/Add";
+
 import "./style.css";
 function App() {
   return (

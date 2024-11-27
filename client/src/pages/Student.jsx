@@ -45,7 +45,14 @@ const Student = () => {
             <button
               className="delete"
               onClick={() => {
-                handleDelete(student.student_id);
+                var answer = window.confirm("Are you Sure");
+                if (answer){
+                  handleDelete(student.student_id);
+                }
+                else {
+                  return false;
+                }
+               
               }}
             >
               Delete
